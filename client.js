@@ -48,10 +48,37 @@ console.log('array of employee data: ',  employees );
 
 // This function will calculate 1 employee's bonus!
 //
+// employees.bonusPercentage = 0;
+// let bonusPercentage = 0;
+
+// let employee = employees.name;
+
+// console.log(employees);
+
 function calculateIndividualEmployeeBonus( employee ) {  
+let bonusPercentage = 0;
+employees.bonusPercentage = 0;
+// let employee = employees.name;
   // your logic here
-  
-  
+  for (i=0; i<employees.length; i++) {
+    if (employees.reviewRating <= 2) {
+     bonusPercentage = employees.annualSalary * (0.00);
+     }
+    else if (employees.reviewRating === 3) {
+      return bonusPercentage = employees.annualSalary * (.04 )}
+    }
+  //   if (employees.reviewRating = 4) {
+  //     return employees.bonusPercentage * .06}
+  //   if (employees.reviewRating = 5) {
+  //     return employees.bonusPercentage * .1}
+  // } 
+
+
+  console.log(employees.bonusPercentage);
   // return new object with bonus results
 
-}
+};
+console.log(calculateIndividualEmployeeBonus('Atticus'));
+
+  
+  // return new object with bonus results
