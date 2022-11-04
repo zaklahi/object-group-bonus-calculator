@@ -70,23 +70,27 @@ function calculateIndividualEmployeeBonus( employee) {
 if (employee.reviewRating <= 2) {
      ratingBonus = 0;
      }
-     else if (employee.reviewRating === 3) {
+      if (employee.reviewRating === 3) {
      ratingBonus = employee.annualSalary * (.04 )
     }
-    else if (employee.reviewRating === 4){
+     if (employee.reviewRating === 4){
       ratingBonus = employee.annualSalary * (.06) 
     }
-    else if (employee.reviewRating === 5) {
+     if (employee.reviewRating === 5) {
       ratingBonus = employee.annualSalary * (.10)
     }
-  if (employees.employeeNumber <= 9999) {
+  if (employee.employeeNumber <= 9999) {
     employeeNumberBonus = employee.annualSalary * (.05)
   }
+  else if (employee.annualSalary >= 65000) {
+    ratingBonus = annualSalary * (.01)
+  }
+
   return ratingBonus;
 }
 }
 
-console.log(calculateIndividualEmployeeBonus('Atticus'))
+console.log(calculateIndividualEmployeeBonus('Scout', employees))
   
 //   // return new object with bonus results
 
