@@ -54,31 +54,49 @@ console.log('array of employee data: ',  employees );
 // let employee = employees.name;
 
 // console.log(employees);
+let ratingBonus = 0;
+let totalCompensation= 0;
+let totalBonus = 0;
+let employeeNumberBonus = 0;
 
-function calculateIndividualEmployeeBonus( employee ) {  
-let bonusPercentage = 0;
-employees.bonusPercentage = 0;
-// let employee = employees.name;
+
+function calculateIndividualEmployeeBonus( employee) {  
+
+
+
   // your logic here
-  for (i=0; i<employees.length; i++) {
-    if (employees.reviewRating <= 2) {
-     bonusPercentage = employees.annualSalary * (0.00);
+  for (let i=0; i<employees.length; i++) { 
+    employee = employees[i];
+if (employee.reviewRating <= 2) {
+     ratingBonus = 0;
      }
-    else if (employees.reviewRating === 3) {
-      return bonusPercentage = employees.annualSalary * (.04 )}
+     else if (employee.reviewRating === 3) {
+     ratingBonus = employee.annualSalary * (.04 )
     }
-  //   if (employees.reviewRating = 4) {
-  //     return employees.bonusPercentage * .06}
-  //   if (employees.reviewRating = 5) {
-  //     return employees.bonusPercentage * .1}
-  // } 
+    else if (employee.reviewRating === 4){
+      ratingBonus = employee.annualSalary * (.06) 
+    }
+    else if (employee.reviewRating === 5) {
+      ratingBonus = employee.annualSalary * (.10)
+    }
+  if (employees.employeeNumber <= 9999) {
+    employeeNumberBonus = employee.annualSalary * (.05)
+  }
+  return ratingBonus;
+}
+}
 
+console.log(calculateIndividualEmployeeBonus('Atticus'))
+  
+//   // return new object with bonus results
 
-  console.log(employees.bonusPercentage);
-  // return new object with bonus results
-
-};
-console.log(calculateIndividualEmployeeBonus('Atticus'));
+// };
+// console.log(calculateIndividualEmployeeBonus('Atticus', employees));
 
   
-  // return new object with bonus results
+//   // return new object with bonus results
+
+
+
+
+
